@@ -47,8 +47,18 @@ const server = new http.createServer((req,res)=>{
             }
         })
     }
-    else{
-        try{
+    else if(ReqType == "text/html"){
+        fs.readFile(defaultResPath+url,"utf-8",(err,data)=>{
+            if(err) {res.writeHead(404,{"Content-Type":"text/html"})
+                res.write("<h1 align='center'>!!404 Not Found!!</h1>")
+                res.end();}
+            else{
+            res.writeHead(200,{"Content-Type":ReqType});
+            res.write(data);
+            res.end();
+            }
+        })
+    }else if(ReqType == "image/jpeg" || ReqType == "image/png"){
         fs.readFile(defaultResPath+url,"utf-8",(err,data)=>{
             if(err) throw err;
             else{
@@ -56,14 +66,18 @@ const server = new http.createServer((req,res)=>{
             res.write(data);
             res.end();
             }
-        })
-    }catch{
-        res.writeHead(404,{"Content-Type":"text/html"})
-        res.write("<h1 align='center'>!!404 Not Found!!</h1>")
-        res.end();
+        }) 
+    }else if(ReqType == "text/css"){
+        fs.readFile(defaultResPath+url,"utf-8",(err,data)=>{
+            if(err) throw err;
+            else{
+            res.writeHead(200,{"Content-Type":ReqType});
+            res.write(data);
+            res.end();
+            }
+        }) 
     }
-    }
-
+    
 })
 server.listen(port,()=>{
     console.log(`Server Listen to http://localhost:${port}`);
