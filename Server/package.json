@@ -10,6 +10,6 @@
     "nodemon": "^3.1.2"
   },
   "scripts": {
-    "serverStart" : "nodemon app.cjs"
+    "serverStart": "nodemon app.cjs"
   }
 }

@@ -1,9 +1,12 @@
 const express = require('express');
 const app = express();
+const fs = require('fs');
+const productsData = JSON.stringify('/Database/products.json')
 const PORT = 8080;
 const Router = require('router');
 
 app.get('/',(req,res)=>{
+    console.log(productsData);
     res.sendFile(__dirname+"/Main/html/index.html");
 })
 app.get('/login',(req,res)=>{
@@ -12,17 +15,18 @@ app.get('/login',(req,res)=>{
 app.get('/register',(req,res)=>{
     res.sendFile(__dirname+'/Main/html/register.html')
 })
-// app.get('/products/shoes/:name',(req,res)=>{
-//     res.send(`Get Product ${res.parems.name}`)
-// })
+app.get('/products/shoes/:id',(req,res)=>{
+    res.send(`Product Name ${res.params.id}`)
+})
 
-// app.use((req,res,next)=>{
-//     console.log(req.url);
-//     next();
-// })
+app.use((req,res,next)=>{
+    console.log(req.url);
+    next();
+})
 const imgRoute = require('./imgRoutes');
 const cssRoute = require('./cssRoutes');
 const productsRoute = require('./products');
+const { log } = require('console');
 app.use('/css',cssRoute,(req,res,next)=>{console.log(req.url);next();});
 app.use('/Images',imgRoute,(req,res,next)=>{console.log(req.url);next();});
 app.use('/products',productsRoute,(req,res,next)=>{console.log(req.url);next();});
