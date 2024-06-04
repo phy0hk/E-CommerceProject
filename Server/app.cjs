@@ -17,9 +17,6 @@ app.get('/login',(req,res)=>{
 app.get('/register',(req,res)=>{
     res.sendFile(__dirname+'/Main/html/register.html')
 })
-app.get('/products/shoes/:id',(req,res)=>{
-    res.send(`Product Name ${res.params.id}`)
-})
 
 app.use((req,res,next)=>{
     console.log(req.url);
@@ -28,7 +25,6 @@ app.use((req,res,next)=>{
 const imgRoute = require('./imgRoutes');
 const cssRoute = require('./cssRoutes');
 const productsRoute = require('./products.js');
-const { log } = require('console');
 app.use('/css',cssRoute,(req,res,next)=>{console.log(req.url);next();});
 app.use('/Images',imgRoute,(req,res,next)=>{console.log(req.url);next();});
 app.use('/products',productsRoute,(req,res,next)=>{console.log(req.url);next();});

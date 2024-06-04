@@ -6,8 +6,9 @@ const getData = async(reqUrl)=>{
         const response = await fetch(reqUrl);
         const json = await response.json();
         console.log(json);
-        document.getElementById('name').innerHTML = json[0];
-        
+        document.getElementById('name').innerHTML = json.name;
+        document.getElementById('type').innerHTML = json.type;
+        document.getElementById('instock').innerHTML = json.instock;
     } catch (error) {
         console.log(error);
     }
