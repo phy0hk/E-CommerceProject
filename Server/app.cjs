@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
 const fs = require('fs');
-const productsData = JSON.stringify('/Database/products.json')
+const productsData = JSON.stringify('/Database/products.json');
+const HOSTNAME = 'localhost';
 const PORT = 8080;
 const mongodb = require('mongodb');
 const dbserver = '';
@@ -28,6 +29,6 @@ const productsRoute = require('./products.js');
 app.use('/css',cssRoute,(req,res,next)=>{console.log(req.url);next();});
 app.use('/Images',imgRoute,(req,res,next)=>{console.log(req.url);next();});
 app.use('/products',productsRoute,(req,res,next)=>{console.log(req.url);next();});
-app.listen(PORT,()=>{
-    console.log(`Server Listen to http://localhost:${PORT}`);
+app.listen(PORT,HOSTNAME,()=>{
+    console.log(`Server Listen to http://${HOSTNAME}:${PORT}`);
 })
