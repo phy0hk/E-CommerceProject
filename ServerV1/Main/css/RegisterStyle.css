@@ -46,7 +46,7 @@ h2{
 #right{
     background-color: white;
     /* border: 1px solid black; */
-    background-image: url(registerPanel.png);
+    background-image: url(/Images/register/registerPanel.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

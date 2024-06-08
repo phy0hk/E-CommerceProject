@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Card</title>
+    <title id="title"></title>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -18,7 +18,7 @@
 
           
           <div class="logo navbar-brand justify-content-center  ">
-            <img src="./images/logo2.png" alt="" srcset="" class="navbar-brand ms-2" width="40px">
+            <img src="/Images/brandLogo/logo2.png" alt="" srcset="" class="navbar-brand ms-2" width="40px">
         </div>
        
 
@@ -45,13 +45,13 @@
  <section class=" justify-content-center d-flex flex-column align-items-center flex-md-wrap  " style="height: 90vh;">
   <div class="container-lg  w-75 h-100 d-flex flex-row flex-wrap justify-content-center align-items-center   ">
     <div class="w-50  d-flex justify-content-center">
-        <img src="./images/whiteshirt2.png" alt="" srcset="" class=" object-fit-cover w-75  ">
+        <img src="/Images/products/whiteshirt2.png" alt="" srcset="" class=" object-fit-cover w-75  ">
     </div>
     <div class="w-50 d-flex flex-column  justify-content-center align-items-start flex-wrap  py-2" >
     
         <div class="text  px-2">
-          <div class="h2 mt-2">Original Shirt</div>
-          <div class="h3">$19.99</div>
+          <div class="h2 mt-2" id="name">Name</div>
+          <div class="h3" id="price">Price</div>
         </div>
 
            <div class="mt-1">
@@ -89,7 +89,7 @@
        
        <div class=" px-2">
         <div class="h5">Desciption</div>
-        <p>This Shirt is 100% made up of cotton and fibres  </p>
+        <p id="des"></p>
        </div>
 
     
@@ -114,7 +114,7 @@
   </div>
 
   <div class="col-5 pe-3  d-flex flex-column  align-items-end flex-wrap">
-    <img src="./images/logowhite.png" alt="" srcset="" width="200px">
+    <img src="/Images/brandLogo/logowhite.png" alt="" srcset="" width="200px">
     <div class="icons pe-3 me-2 mb-1 d-flex justify-content-center align-items-center w-25  ">
      
       <i class="fa-brands fa-facebook text-white  px-1"></i>
@@ -132,5 +132,6 @@
 
 
 </body>
-<script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
-<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/js/Product.js"></script>
+<script src="/node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+<script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
