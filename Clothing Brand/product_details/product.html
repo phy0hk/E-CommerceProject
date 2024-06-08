@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+<nav class="navbar pt-1  bg-white shadow-sm fixed-top " data-bs-theme="">
+    <div class="container-fluid bg-white  ">
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button> -->
+        
+
+          
+          <div class="logo navbar-brand justify-content-center  ">
+            <img src="./images/logo2.png" alt="" srcset="" class="navbar-brand ms-2" width="40px">
+        </div>
+       
+
+         
+          <ul class="nav ">
+                <li class="nav-item"><a href="" class="nav-link active text-dark small" >HOME</a></li>
+                <li class="nav-item"><a href="" class="nav-link text-dark">SHOP</a></li>
+                <li class="nav-item"><a href="" class="nav-link text-dark">ABOUT</a></li>
+                <li class="nav-item"><a href="" class="nav-link text-dark">LOG IN</a></li>
+          </ul>
+
+   
+        <div>
+           <a href="">
+            <i class="fa-solid fa-user fa-rotate-by me-4" style="color: #000000;"></i>
+         
+           </a>
+           <a href="">   <i class="fa-solid fa-cart-shopping me-2" style="color: #000000;"></i></a>
+        </div>
+    
+    </div>
+  </nav>
+
+ <section class=" justify-content-center d-flex flex-column align-items-center flex-md-wrap  " style="height: 90vh;">
+  <div class="container-lg  w-75 h-100 d-flex flex-row flex-wrap justify-content-center align-items-center   ">
+    <div class="w-50  d-flex justify-content-center">
+        <img src="./images/whiteshirt2.png" alt="" srcset="" class=" object-fit-cover w-75  ">
+    </div>
+    <div class="w-50 d-flex flex-column  justify-content-center align-items-start flex-wrap  py-2" >
+    
+        <div class="text  px-2">
+          <div class="h2 mt-2">Original Shirt</div>
+          <div class="h3">$19.99</div>
+        </div>
+
+           <div class="mt-1">
+            <div class="h4 mt-0 px-2">Color:</div>
+            <div class="btn-group-sm px-2 mt-1">
+              <div class="btn text-black btn-outline-dark px-4 ">Black</div>
+              <div class="btn text-black btn-outline-dark px-4">White</div>
+            </div>
+          
+           </div>
+          
+
+
+           
+           <div class="mt-0">
+            <div class="h4 px-2 mt-1">Size:</div>
+           <div class="btn-group-sm px-2" role="group" aria-label="Basic outlined example">
+            <div class="btn text-black btn-outline-dark px-4 ">S</div>
+            <div class="btn text-black btn-outline-dark px-4">M</div>
+            <div class="btn text-black btn-outline-dark px-4">L</div>
+            <div class="btn text-black btn-outline-dark px-4">XL</div>
+           </div>
+           </div>
+          
+         
+     
+       <div class=" btn-group-sm mt-2 w-75  p-2"  role="group" aria-label="Basic outlined example">
+        <div class="btn btn-outline-dark text-dark w-50 " > Cart</div>
+        <div class="btn btn-outline-dark text-white  " > <i class="fa-regular fa-heart text-white-50"></i></div>
+
+       </div>
+
+     
+       
+       
+       <div class=" px-2">
+        <div class="h5">Desciption</div>
+        <p>This Shirt is 100% made up of cotton and fibres  </p>
+       </div>
+
+    
+          
+  </div>
+</div>
+
+
+ </section>
+
+
+
+ <div class="container-fluid footer bg-dark  justify-content-center d-flex align-items-center" style="height: 38vh;">
+  <div class="col-5 mt-5 ps-3 d-flex flex-column flex-wrap">
+    <span  class="text-white mt-3">Contact us</span>
+    <span class="text-white my-1">About us</span>
+    <span class="text-white my-1 mb-2">Shipping Policy</span>
+
+    <div class="pe-2 mt-5  text-white  align-self-start ">
+      Copyright@2024 Name
+    </div>
+  </div>
+
+  <div class="col-5 pe-3  d-flex flex-column  align-items-end flex-wrap">
+    <img src="./images/logowhite.png" alt="" srcset="" width="200px">
+    <div class="icons pe-3 me-2 mb-1 d-flex justify-content-center align-items-center w-25  ">
+     
+      <i class="fa-brands fa-facebook text-white  px-1"></i>
+      <i class="fa-brands fa-instagram text-white px-1"></i>
+      <i class="fa-brands fa-twitter text-white px-1"></i>
+     
+    </div>
+  </div>
+ </div>
+
+
+
+
+
+
+
+</body>
+<script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+<script src="../node_modules/popover/popover.built.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+  const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+</script>
+</html>
