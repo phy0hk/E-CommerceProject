@@ -71,7 +71,7 @@ try{
     })
 }catch{
     console.log("!!Error Occur!!");
-    console.log("I think Database has error occur Restart the server script again or Check the MongoDB server!!!");
+    console.log("Database has error occur Restart the server script again or Check the MongoDB server!!!");
 }
 finally{
     await client.close;
